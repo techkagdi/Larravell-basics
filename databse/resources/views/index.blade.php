@@ -8,6 +8,20 @@
 </head>
 <body>
     <h2>Index PAge</h2>
-    <a href="{{url('/create')}}">Create</a>
+    <a href="{{url('/create')}}">Create</a><br>
+    <table>
+<th>
+        <td>Email id</td>
+        <td>Password</td>
+        <td>Status</td>
+</th>
+    @foreach ($users as $item)
+        <tr>
+            <td>{{$item->email}}</td>
+            <td>{{$item->password}}</td>
+            <td>{{$item->status}}</td>
+        </tr>
+    @endforeach
+    </table>
 </body>
 </html>
